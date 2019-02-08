@@ -1,0 +1,13 @@
+h1 {
+    text-align: center
+}
+
+html, body {
+	width: 99%;
+    text-align: center;
+    margin: 0 auto ;
+    padding: 0 ;
+}
+
+
+/*{ border: 1px solid darkred; }
