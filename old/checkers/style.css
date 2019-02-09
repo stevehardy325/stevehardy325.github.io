@@ -1,0 +1,35 @@
+
+.game {
+	width: 540px;
+  text-align: center;
+  margin: 0 auto ;
+  background: #4E5D6C;
+}
+
+.board {
+    margin: 1;
+    padding: 1;
+    display: inline-grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+    background-color: black;
+    border: 2px solid grey;
+}
+
+.square {
+    width: 40px;
+    height: 40px;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+svg {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    height: 40px;
+    width: 40px;
+    display: block;
+}
+
+.newgamebtn {
+  margin: 10px;
+}
