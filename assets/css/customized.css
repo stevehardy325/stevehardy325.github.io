@@ -7,7 +7,6 @@
 .footerflex {
   display:flex;
   justify-content:space-between;
-  height:50px;
 }
 
 html, body {
@@ -27,6 +26,7 @@ html, body {
 
 .noflex-footer {
   flex-shrink: 0;
+  padding: 1em 0 0 0 ;
 }
 
 /* {
