@@ -1,75 +1,17 @@
 ---
 layout: default
-title: About
+title: Posts
 ---
-<div class="jumbotron">
-	<div class="row row justify-content-center align-self-center" style="align-items: center;">
-		<div class="col-sm-5 col-md-4  col-lg-3 text-center order-1 order-lg-2">
-			<img class="rounded-circle" src="/assets/images/selfie2.bmp" alt="" style="width: 100%;">
-		</div>
-		<div class="col-lg-9 order-2 order-lg-1">
-			<h1 class="display-2">Hi! I'm Steve.</h1>
-			<h4>I’m a recently-minted developer. I have experience mostly in Java and Python, but I'm always willing to learn new technologies.</h4>
-			<h4>Outside of work, I read a lot, particularly about game history.<br /> I also play guitar and bass.</h4>
-		</div>
-	</div>
-</div>
 
 
-<div class="row" style="align-items: stretch;">
-	
-	<div class="col order-2 order-lg-1">
-		<h1>About Me</h1>
-		<p>I’m a recent graduate from the University of Pittsburgh, and I've lived here for basically my whole life. Though I'd prefer to stay here because I'm familar with the area, I don't have any particular objections to moving away in the future. </p>
-		<p>Coming out of high school, I was unsure of my career interests until I discovered a passion for programming in my first year of college. I applied myself heavily since then, both academically and while working part-time to fund my education. Thanks to a number of years working in retail, I've learned much about customer-relations and teamwork. Now that I'm working professionally as a developer, I can say that the experience was good for me.</p>
-		<p>Currently I work as a Junior SQL Developer Consultant. I'd love to travel more someday, but for now I'm focused on working on my career.</p>
-		<h1>Programming Interests</h1>
-		<p>The majority of my professional experience right now is in databases and creating custom data-import programs.</p>
-	</div>
-	
-	<div class="col-lg-4 order-1 order-lg-2">
-		
-		<div class="card border-primary mb-3">
-			<div class="card-body">
-				<h4 class="card-title">Education</h4>
-				<p class="card-text">
-				<ul>
-					<li>
-						B.S. in Computer Science; History Minor
-						<ul>
-							<li>University of Pittsburgh</li>
-							<li>April 2018</li>
-						</ul>
-					</li>
-					<li>
-						AS in Computer Information Science,
-						<ul>
-							<li>Community College of Allegheny County</li>
-							<li>April 2016</li>
-						</ul>
-					</li>
-				</ul>
-				</p>
-			</div>
-		</div>
-	
-		<div class="card border-primary mb-3">
-			<div class="card-body">
-				<h4 class="card-title">My Primary Languages</h4>
-				<p class="card-text">
-					Python, Java, SQL
-				</p>
-			</div>
-		</div>
-	
-		<div class="card border-primary mb-3">
-			<div class="card-body">
-				<h4 class="card-title">Toolchains</h4>
-				<p class="card-text">
-					Linux, Bash, Git/GitHub
-				</p>
-			</div>
-		</div>
-	
-	</div>
+  {% for post in site.posts %}
+  <div class="card border-primary mb-3">
+  <div class="card-header"><small class="text-muted"><time datetime="{{ post.date }}">{{ post.date | date: "%B %e, %Y" }}</time></small></div>
+  <div class="card-body">
+    <h4 class="card-title"><a href="{{ post.url }}">{{ post.title }} </a></h4>
+    <p class="card-text">{{ post.excerpt }}</p>
+  </div>
 </div>
+
+  {% endfor %}
+
