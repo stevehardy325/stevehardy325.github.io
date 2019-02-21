@@ -1,0 +1,79 @@
+#resize-div {
+	display: grid;
+	grid-template-columns: 5fr 1fr;
+	grid-template-rows: 1fr 5fr 1fr;
+	width: 60vw;
+	height: 70vw;
+	min-width: 300px;
+	min-height: 350px;
+	margin: auto;
+	background-color: black;
+	max-height: 70vh;
+	max-width: 60vh;
+	padding: 0;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+#maze-container {
+	display: grid;
+	background-color: black;
+	width: 100%;
+	height: 100%;
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row-start: 2;
+	grid-row-end: 3;
+}
+
+#gen-button-container {
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row-start: 1;
+	grid-row-end: 2;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: stretch;
+}
+
+#move-button-container {
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row-start: 3;
+	grid-row-end: 3;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: stretch;
+}
+
+.maze-space {
+	background-color: white;
+	border: 1px solid black;
+	text-align: center;
+}
+
+.openN {
+	border-top: 0px solid white;
+}
+
+.openS {
+	border-bottom: 0px solid white;
+}
+
+.openW {
+	border-left: 0px solid white;
+}
+
+.openE {
+	border-right: 0px solid white;
+}
+
+.gen-button {
+	width: 40%;
+}
+
+.move-button {
+	width: 25%;
+}

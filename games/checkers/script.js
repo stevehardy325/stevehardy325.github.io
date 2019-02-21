@@ -9,7 +9,7 @@ function State() {
 	this.board = new Board(this.players);
 
 	//a function to initially format the webpage game board
-	this.format = function () {
+	this.format = function() {
 		var t = document.getElementById("board");
 		var colors = ["black", "red"]
 		var colorindex = 1
@@ -27,7 +27,7 @@ function State() {
 	};
 
 	//a function to return a html element for the current player
-	this.renderPlayer = function () {
+	this.renderPlayer = function() {
 		var color = this.players[this.currentPlayer];
 		var playerName = (color === "black") ? 1 : 2;
 
@@ -41,7 +41,7 @@ function State() {
 	};
 
 	//a function to change control to the other player
-	this.changePlayer = function () {
+	this.changePlayer = function() {
 		this.currentPlayer = (this.currentPlayer + 1) % 2;
 	};
 }
@@ -138,7 +138,7 @@ function Piece(color, x, y) {
 	this.isKing = false;
 
 	//return an svg rendering of the piece
-	this.render = function () {
+	this.render = function() {
 		var outline = (this.isKing) ? "gold" : "grey";
 		var fill = (this.color === "red") ? "crimson" : "black";
 		var circle = "<circle cx='20' cy='20' r='15' stroke='" + outline + "' stroke-width='2' fill='" + fill + "' />"
@@ -151,7 +151,7 @@ function Piece(color, x, y) {
 	};
 
 	//get an array of spaces that this piece can attack to
-	this.canAttack = function () {
+	this.canAttack = function() {
 		var spaces = gameState.board.spaces;
 		var y = this.y;
 		var x = this.x;
@@ -353,12 +353,12 @@ function highlightPossible(tgt) {
 }
 
 function newGame() {
-    var htmlboard = document.getElementById("board");
-    htmlboard.innerHTML = "";
-    //renderBoard()
-    gameState = new State;
-    gameState.format()
+	var htmlboard = document.getElementById("board");
+	htmlboard.innerHTML = "";
+	//renderBoard()
+	gameState = new State;
+	gameState.format()
 
-} 
+}
 
 newGame();

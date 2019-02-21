@@ -1,0 +1,29 @@
+---
+title: Maze
+layout: default
+---
+
+<link rel="stylesheet" href="/assets/css/maze.css">
+<div id="resize-div">
+	<div id="gen-button-container">
+
+		<button type="button" class="gen-button" onclick="newMaze(8)">New Maze 8</button>
+		<button type="button" class="gen-button" onclick="newMaze(12)">New Maze 12</button>
+		<button type="button" class="gen-button" onclick="newMaze(15)">New Maze 15</button>
+		<button type="button" class="gen-button" onclick="newMaze(20)">New Maze 20</button>
+	</div>
+
+
+
+	<div id="maze-container"></div>
+	<div id="move-button-container">
+		<button type="button" class="move-button" onclick="moveLeft()">Left</button>
+		<button type="button" class="move-button" onclick="moveUp()">Up</button>
+		<button type="button" class="move-button" onclick="moveDown()">Down</button>
+		<button type="button" class="move-button" onclick="moveRight()">Right</button>
+	</div>
+</div>
+
+
+<script src="/assets/js/maze.js">
+</script>
