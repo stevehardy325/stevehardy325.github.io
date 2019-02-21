@@ -1,2 +1,2 @@
 excerpt_separator   : "<!--more-->"
-exclude: [Gemfile, Gemfile.lock, vendor, script]
+exclude:  [Gemfile, Gemfile.lock, vendor, script]

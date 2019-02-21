@@ -1,32 +1,30 @@
 .headerflex {
-  display:flex;
-  justify-content:space-between;
+	display: flex;
+	justify-content: space-between;
 }
 
-
 .footerflex {
-  display:flex;
-  justify-content:space-between;
+	display: flex;
+	justify-content: space-between;
 }
 
 html, body {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
 }
 
-
 .noflex-header {
-  flex-shrink: 0;
+	flex-shrink: 0;
 }
 
 .flex-contents {
-  flex: 1;
+	flex: 1;
 }
 
 .noflex-footer {
-  flex-shrink: 0;
-  padding: 1em 0 0 0 ;
+	flex-shrink: 0;
+	padding: 1em 0 0 0;
 }
 
 /* {
