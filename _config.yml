@@ -1,2 +1,5 @@
 excerpt_separator   : "<!--more-->"
 exclude:  [Gemfile, Gemfile.lock, vendor, script]
+collections:
+    games:
+        output: true
