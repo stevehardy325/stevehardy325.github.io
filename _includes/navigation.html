@@ -28,9 +28,12 @@
 							Games
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-							<a class="dropdown-item" href="/games/checkers/index.html">Checkers</a>
-							<a class="dropdown-item" href="/games/prim-maze.html">Prim's Maze</a>
-							<a class="dropdown-item disabled">More to Come (Probably)</a>
+							{% for game in site.games %}
+							<a class="dropdown-item" href="{{ game.url }}">
+								{{ game.title }}
+							</a>
+							{% endfor %}
+							<a class="dropdown-item disabled">...More to Come (Probably)</a>
 						</div>
 					</li>
 				</ul>
