@@ -13,7 +13,12 @@ pipeline {
     }
     stage('Build') {
       steps {
-        sh 'bash script/cibuild'
+        sh 'bundle exec jekyll build'
+      }
+    }
+    stage('Test') {
+      steps {
+        sh 'bundle exec htmlproofer ./_site --disable-external'
       }
     }
   }
